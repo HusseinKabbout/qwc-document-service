@@ -60,6 +60,7 @@ def get_document(tenant, template, format):
 
         # http://localhost:8002/reports/BelasteteStandorte/?format=pdf&p1=v1&..
         url = "%s/%s/" % (jasper_service_url, jasper_template)
+        print(url)
         params = {"format": format}
         for k, v in request.args.lists():
             params[k] = v
